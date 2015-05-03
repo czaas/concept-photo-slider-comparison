@@ -1,1 +1,1 @@
-function hello(){return"jello"}
+!function(){var s=$("#draggable").css("left");$("#draggable").on("mousedown",function(e){var o=$(this),t=$("#slidingBG"),n=o.parent(),c=(n.width(),e.pageX);$(document).on("mouseup",function(){s=o.css("left"),$(document).off("mouseup").off("mousemove")}),$(document).on("mousemove",function(e){s=e.pageX-c,0>=s?(s=0,o.css({left:s}),t.css("width",s+"px")):s>=n.width()?(s=n.width()-5,o.css({left:s}),t.css("width",s+"px")):(o.css({left:s}),t.css("width",s+"px"))})})}();
